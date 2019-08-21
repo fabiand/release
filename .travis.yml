@@ -1,0 +1,9 @@
+script:
+- make
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash push.sh
+  on:
+    branch: master
