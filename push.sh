@@ -8,7 +8,7 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git add -f docs/
 git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-git remote add github https://${GITHUB_TOKEN}@github.com/kubevirt/release.git || :
+git remote add github https://${GITHUB_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git || :
 # We need to be on master because of `asciibinder package`
 git push github master
 
